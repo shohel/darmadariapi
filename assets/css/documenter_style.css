@@ -345,7 +345,7 @@ hr{border-top:1px solid #EBEBEB;border-bottom:1px solid #FFFFFF;}
 	font-weight:700;
 }
 #documenter_content table th, #documenter_content table td{
-	padding:3px;
+	padding:5px;
 	text-align:left;
 }
 #documenter_content code{
