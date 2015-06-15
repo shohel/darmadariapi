@@ -30,12 +30,13 @@
 </head>
 <body class="documenter-project-itemname">
 	<div id="documenter_sidebar">
-		<a href="#documenter_cover" id="logo_text">Darmadari</a>
+		<a href="#documenter_cover" id="logo_text">Darmadari API (v.1)</a>
 		<ul id="documenter_nav">
             <li class="nav-header"> <a href="#general">General</a> </li>
             <li><a class="current" href="#menu_item">Menu Item</a></li>
 			<li><a href="#city_list" title="City List">City List</a></li>
             <li><a href="#nearest_by_main_branch" title="Nearest by Main Branch">Nearest by Main Branch</a></li>
+            <li><a href="#search_api" title="Search">Search</a></li>
 		</ul>
 		<div id="documenter_copyright">Copyright <a href="http://aapbd.com">AAPBD </a></div>
 	</div>
@@ -356,6 +357,117 @@
 }
 </pre>
 </section>
+
+
+
+
+<section id="search_api">
+    
+            <div class="page-header"><h3>Branch Search</h3><hr class="notop"></div>
+
+                <h4 class="method"> <span class="get"> GET</span> </h4>
+                <pre class="prettyprint lang-html">http://aapbd.com/darmadari/api/searchBusinessItem?q=Burger</pre>
+
+                <h5>Parameter</h5>
+
+                <table>
+                    <tr>
+                        <th>Field</th>
+                        <th>Value</th>
+                        <th>Description</th>
+                    </tr>
+                    <tr>
+                        <td>q</td>
+                        <td>Burger</td>
+                        <td><b>(String)</b> Search business item or branch based on search terms </td>
+                    </tr>
+
+                </table>
+
+                <h5>Response (Success)</h5>        
+
+
+                <pre class="prettyprint lang-js linenums">
+{
+    "status": "1",
+    "message": "Data Show Successfully",
+    "result": [
+        {
+            "id": "133",
+            "name_english": "Burger Co",
+            "name_arabic": "برجر كو",
+            "short_description_english": "The REAL Burgers",
+            "short_description_arabic": "البرجر الاصلي",
+            "categoryID": "1",
+            "category_name_english": "Restaurants and Cafes",
+            "category_name_arabic": "المطاعم و المقاهي",
+            "subcategory_name_english": "",
+            "subcategory_name_arabic": "",
+            "instagram": "@burgercokw",
+            "twitter": "@burgercokw",
+            "facebook": "",
+            "email": "burgerco@freshpoints.com",
+            "website": "http://burgerco.com/",
+            "createdate": "1428828529",
+            "expdate": "1428828529",
+            "city_name_english": "Farwaniya",
+            "city_name_arabic": "الفروانية",
+            "area_name_english": "",
+            "area_name_arabic": "",
+            "lat": "29.32574036826305",
+            "lng": "48.027141094207764",
+            "phone": "222 51 555",
+            "physicaladdress_english": "Jabriya\nBlock 3A\nBehind Royal Hayat Hospital",
+            "physicaladdress_arabic": "الجابرية \nقطعة 3 أ\nخلف مستشفى رويال حياة",
+            "image": "63be038749d1b46147992909feb9f982.JPG",
+            "rating": "2.81",
+            "visitor": "344"
+        },
+        {
+            "id": "133",
+            "name_english": "Burger Co",
+            "name_arabic": "برجر كو",
+            "short_description_english": "The REAL Burgers",
+            "short_description_arabic": "البرجر الاصلي",
+            "categoryID": "1",
+            "category_name_english": "Restaurants and Cafes",
+            "category_name_arabic": "المطاعم و المقاهي",
+            "subcategory_name_english": "",
+            "subcategory_name_arabic": "",
+            "instagram": "@burgercokw",
+            "twitter": "@burgercokw",
+            "facebook": "",
+            "email": "burgerco@freshpoints.com",
+            "website": "http://burgerco.com/",
+            "createdate": "1428828529",
+            "expdate": "1428828529",
+            "city_name_english": "Ahmadi",
+            "city_name_arabic": "الأحمدي",
+            "area_name_english": "",
+            "area_name_arabic": "",
+            "lat": "28.599617827296434",
+            "lng": "48.3892822265625",
+            "phone": "222 51 555",
+            "physicaladdress_english": "Khairan 293",
+            "physicaladdress_arabic": "الخيران\nطريق 293",
+            "image": "311ad9ad936cbf6869e530ad990f4a05.JPG",
+            "rating": "2.81",
+            "visitor": "344"
+        }
+    ]
+}                </pre>
+
+                    <h5>Response (Error)</h5>
+<pre class="prettyprint lang-js linenums">
+{
+    "status": "0",
+    "message": "No Data Found",
+    "result": []
+}
+</pre>
+</section>
+
+
 
 
 
