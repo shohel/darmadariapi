@@ -34,8 +34,17 @@
 		<ul id="documenter_nav">
             <li class="nav-header"> <a href="#general">General</a> </li>
             <li><a class="current" href="#menu_item">Menu Item</a></li>
-			<li><a href="#city_list" title="City List">City List</a></li>
+            <li><a href="#city_list" title="City List">City List</a></li>
+            <li><a href="#area_list_by_city" title="Area List by City">Area List by City</a></li>
+            <li><a href="#area_list" title="City List">Area List</a></li>
+            <li><a href="#sponsor_list" title="Sponsor List">Sponsor List</a></li>
+            <li><a href="#nearest_branch" title="Nearest Branch">Nearest Branch</a></li>
             <li><a href="#nearest_by_main_branch" title="Nearest by Main Branch">Nearest by Main Branch</a></li>
+            <li><a href="#all_branch_by_business" title="All Branch by Business">All Branch by Business</a></li>
+            <li><a href="#all_branch_by_city" title="All Branch by City">All Branch by City</a></li>
+            <li><a href="#insert_rating" title="Insert Rating">Insert Rating</a></li>
+            <li><a href="#all_branch_by_category" title="All Branch by Category">All Branch by Category</a></li>
+
             <li><a href="#search_api" title="Search">Search</a></li>
 		</ul>
 		<div id="documenter_copyright">Copyright <a href="http://aapbd.com">AAPBD </a></div>
@@ -189,7 +198,7 @@
             <div class="page-header"><h3>City List</h3><hr class="notop"></div>
 
                 <h4 class="method"> <span class="get"> GET</span> </h4>
-                <pre class="prettyprint lang-html">http://aapbd.com/darmadari/api/menuitem</pre>
+                <pre class="prettyprint lang-html">http://aapbd.com/darmadari/api/cityList</pre>
 
                 <h5>No parameter needed</h5>
                 <h5>Success Field</h5>
@@ -222,40 +231,42 @@
 
                 <pre class="prettyprint lang-js linenums">
 {
-"status": "1",
-"message": "Data Show Successfully",
-"result": [
-    {
-        "id": "6",
-        "name_english": "My Location",
-        "name_arabic": "مكاني"
-    },
-    {
-        "id": "5",
-        "name_english": "Kuwait City",
-        "name_arabic": "مدينة الكويت"
-    },
-    {
-        "id": "4",
-        "name_english": "Ahmadi",
-        "name_arabic": "أحمدي"
-    },
-    {
-        "id": "3",
-        "name_english": "Hawalli",
-        "name_arabic": "حولي"
-    },
-    {
-        "id": "2",
-        "name_english": "Farwaniya",
-        "name_arabic": "الفروانية"
-    },
-    {
-        "id": "1",
-        "name_english": "Jahra",
-        "name_arabic": "\nالجهراء"
-    }
-]
+    "status": "1",
+    "message": "Data Show Successfully",
+    "result": [
+        {
+            "id": "1",
+            "name_english": "Kuwait City",
+            "name_arabic": "مدينة الكويت",
+            "slNo": "2",
+            "area": [
+                {
+                    "id": "2",
+                    "name_english": "Abdulla Al Salem",
+                    "name_arabic": "عبدالله السالم",
+                    "cityid": "1",
+                    "uploadby": "1",
+                    "status": "approved"
+                },
+                {
+                    "id": "81",
+                    "name_english": "Adailiya",
+                    "name_arabic": "العديلية",
+                    "cityid": "1",
+                    "uploadby": "1",
+                    "status": "approved"
+                },
+                {
+                    "id": "82",
+                    "name_english": "Bneid Al Gar",
+                    "name_arabic": "بنيد القار",
+                    "cityid": "1",
+                    "uploadby": "1",
+                    "status": "approved"
+                }
+            ]
+        }
+    ]
 }
                 </pre>
 
@@ -265,6 +276,320 @@
     "status":"0",
     "message":"No Data Found",
     "result":[]
+}
+</pre>
+        </section>
+
+
+        <section id="area_list_by_city">
+            <div class="page-header"><h3>Area List By City</h3><hr class="notop"></div>
+                <h4 class="method"> <span class="get"> GET</span> </h4>
+                <pre class="prettyprint lang-html">http://aapbd.com/darmadari/api/areaListbycity?cityid=6</pre>
+
+                <h5>Parameter</h5>
+
+                <table>
+                    <tr>
+                        <th>Field</th>
+                        <th>Type</th>
+                        <th>Description</th>
+                    </tr>
+                    <tr>
+                        <td>cityid</td>
+                        <td>6</td>
+                        <td>It will by city id, so area will show under this city id.</td>
+                    </tr>
+                
+                </table>
+
+                <h5>Example Response (Success)</h5>
+
+
+                <pre class="prettyprint lang-js linenums">
+{
+    "status": "1",
+    "message": "Data Show Successfully",
+    "result": [
+        {
+            "id": "124",
+            "name_english": "Abu Fateera",
+            "name_arabic": "ابو فطيره",
+            "cityid": "6",
+            "uploadby": "1",
+            "status": "approved"
+        },
+        {
+            "id": "125",
+            "name_english": "Abu Hasaniya",
+            "name_arabic": "ابو الحصانيه",
+            "cityid": "6",
+            "uploadby": "1",
+            "status": "approved"
+        },
+        {
+            "id": "126",
+            "name_english": "Adan",
+            "name_arabic": "العدان",
+            "cityid": "6",
+            "uploadby": "1",
+            "status": "approved"
+        }
+    ]
+}                </pre>
+
+                    <h5>Example Response (Error)</h5>
+<pre class="prettyprint lang-js linenums">
+{
+    "status":"0",
+    "message":"No Data Found",
+    "result":[]
+}
+</pre>
+        </section>
+
+
+
+        <section id="area_list">
+            <div class="page-header"><h3>Area List</h3><hr class="notop"></div>
+
+                <h4 class="method"> <span class="get"> GET</span> </h4>
+                <pre class="prettyprint lang-html">http://aapbd.com/darmadari/api/areaList</pre>
+
+                <h5>No parameter needed</h5>
+                
+                <h5>Example Response (Success)</h5>
+
+
+                <pre class="prettyprint lang-js linenums">
+{
+    "status": "1",
+    "message": "Data Show Successfully",
+    "result": [
+        {
+            "id": "18",
+            "name_english": "Abbasiya",
+            "name_arabic": "العباسية",
+            "cityid": "3",
+            "uploadby": "1",
+            "status": "approved"
+        },
+        {
+            "id": "118",
+            "name_english": "Abdulla Al Mubarak – West Jileeb",
+            "name_arabic": "عبدالله المبارك - غرب الجليب",
+            "cityid": "3",
+            "uploadby": "1",
+            "status": "approved"
+        },
+        {
+            "id": "2",
+            "name_english": "Abdulla Al Salem",
+            "name_arabic": "عبدالله السالم",
+            "cityid": "1",
+            "uploadby": "1",
+            "status": "approved"
+        }
+    ]
+}
+                </pre>
+
+                    <h5>Example Response (Error)</h5>
+<pre class="prettyprint lang-js linenums">
+{
+    "status":"0",
+    "message":"No Data Found",
+    "result":[]
+}
+</pre>
+        </section>
+
+
+
+                <section id="sponsor_list">
+            <div class="page-header"><h3>Sponsor List</h3><hr class="notop"></div>
+
+                <h4 class="method"> <span class="get"> GET</span> </h4>
+                <pre class="prettyprint lang-html">http://aapbd.com/darmadari/api/sponsor</pre>
+
+                <h5>No parameter needed</h5>
+                
+                <h5>Example Response (Success)</h5>
+
+
+                <pre class="prettyprint lang-js linenums">
+{
+    "status": "1",
+    "message": "Data Show Successfully",
+    "result": [
+        {
+            "id": "133",
+            "status": "active",
+            "name_english": "Burger Co",
+            "name_arabic": "برجر كو",
+            "short_description_english": "The REAL Burgers",
+            "short_description_arabic": "البرجر الاصلي",
+            "categoryID": "1",
+            "category_name_english": "Restaurants and Cafes",
+            "category_name_arabic": "المطاعم و المقاهي",
+            "subcategory_name_english": "Restaurant",
+            "subcategory_name_arabic": "مطعم",
+            "instagram": "@burgercokw",
+            "twitter": "@burgercokw",
+            "facebook": "",
+            "email": "burgerco@freshpoints.com",
+            "website": "http://burgerco.com/",
+            "createdate": "1428828529",
+            "expdate": "1428828529",
+            "city_name_english": "Farwaniya",
+            "city_name_arabic": "الفروانية",
+            "featured": "0",
+            "area_name_english": "Jabriya",
+            "area_name_arabic": "الجابريه",
+            "lat": "29.32574036826305",
+            "lng": "48.027141094207764",
+            "phone": "222 51 555",
+            "physicaladdress_english": "Jabriya\nBlock 3A\nBehind Royal Hayat Hospital",
+            "physicaladdress_arabic": "الجابرية \nقطعة 3 أ\nخلف مستشفى رويال حياة",
+            "image": "63be038749d1b46147992909feb9f982.JPG",
+            "rating": "2.81",
+            "visitor": "344"
+        },
+        {
+            "id": "135",
+            "status": "active",
+            "name_english": "Saj Co",
+            "name_arabic": "صاج كو",
+            "short_description_english": "Best Saj And Shawarma in Kuwait",
+            "short_description_arabic": "أطيب صاج وشاورما بالكويت",
+            "categoryID": "1",
+            "category_name_english": "Restaurants and Cafes",
+            "category_name_arabic": "المطاعم و المقاهي",
+            "subcategory_name_english": "Restaurant",
+            "subcategory_name_arabic": "مطعم",
+            "instagram": "@sajcokw",
+            "twitter": "@sajcokw",
+            "facebook": "",
+            "email": "sajco@freshpoints.com",
+            "website": "www.sajcokw.com",
+            "createdate": "1428830474",
+            "expdate": "1428830474",
+            "city_name_english": "Jahra",
+            "city_name_arabic": "الجهراء",
+            "featured": "0",
+            "area_name_english": "Mubarakiya",
+            "area_name_arabic": "المباركية",
+            "lat": "29.375997974961866",
+            "lng": "47.97522157430649",
+            "phone": "222 51 555",
+            "physicaladdress_english": "Mubarakiya\nSaqran Complex\nBehind Gulf Bank Head Office",
+            "physicaladdress_arabic": "المباركية\nمجمع الصقران\nخلف بنك الخليج الرئيسي",
+            "image": "f683277b799c38270ae22f67395c1aca.png",
+            "rating": "3.16",
+            "visitor": "159"
+        }
+    ],
+    "baseurl": "http://aapbd.com/darmadari/uploads/"
+}                </pre>
+
+                    <h5>Example Response (No data)</h5>
+<pre class="prettyprint lang-js linenums">
+{
+    "status":"0",
+    "message":"No Data Found",
+    "result":[]
+}
+</pre>
+        </section>
+
+
+
+
+                <section id="nearest_branch">
+            <div class="page-header"><h3>Nearest Branch</h3><hr class="notop"></div>
+
+                <h4 class="method"> <span class="get"> GET</span> </h4>
+                <pre class="prettyprint lang-html">http://aapbd.com/darmadari/api/nearestBranch?businessid=1&lat=2&lng=90&distance=3</pre>
+
+                <h5>Parameter</h5>
+
+                <table>
+                    <tr>
+                        <th>Field</th>
+                        <th>Value</th>
+                        <th>Description</th>
+                    </tr>
+                    <tr>
+                        <td>businessid</td>
+                        <td>1</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>lat</td>
+                        <td>2</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>lng</td>
+                        <td>90</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>distance</td>
+                        <td>3</td>
+                        <td></td>
+                    </tr>
+                </table>
+
+                <h5>Response (Success)</h5>        
+
+
+                <pre class="prettyprint lang-js linenums">
+{
+    "status": "1",
+    "message": "Data Show Successfully",
+    "result": [
+        {
+            "id": "136",
+            "name_english": "",
+            "name_arabic": "صاج كو",
+            "short_description_english": "Best Saj And Shawarma in Kuwait",
+            "short_description_arabic": "أطيب صاج وشاورما بالكويت",
+            "categoryID": "1",
+            "category_name_english": "Restaurants and Cafes",
+            "category_name_arabic": "المطاعم و المقاهي",
+            "subcategory_name_english": "",
+            "subcategory_name_arabic": "",
+            "instagram": "@sajcokw",
+            "twitter": "@sajcokw",
+            "facebook": "",
+            "email": "sajco@freshpoints.com",
+            "website": "www.sajcokw.com",
+            "createdate": "1432814796",
+            "expdate": "1428830474",
+            "city_name_english": "Farwaniya",
+            "city_name_arabic": "الفروانية",
+            "area_name_english": "",
+            "area_name_arabic": "",
+            "lat": "29.337493214999256",
+            "lng": "48.069777488708496",
+            "phone": "44556677",
+            "physicaladdress_english": "ffff",
+            "physicaladdress_arabic": "hgggg",
+            "image": "c2aee56f48cbb614f1ee2ed9477958bd.png",
+            "rating": "0.00",
+            "visitor": "27",
+            "distance": "10.67645228435527"
+        }
+    ]
+}
+                </pre>
+
+                    <h5>Response (Error)</h5>
+<pre class="prettyprint lang-js linenums">
+{
+    "status": "0",
+    "message": "No Data Found",
+    "result": []
 }
 </pre>
         </section>
@@ -357,6 +682,400 @@
 }
 </pre>
 </section>
+
+
+<section id="all_branch_by_business">
+    
+            <div class="page-header"><h3>All Branch by Business</h3><hr class="notop"></div>
+
+                <h4 class="method"> <span class="get"> GET</span> </h4>
+                <pre class="prettyprint lang-html"> http://aapbd.com/darmadari/api/allBranch?businessid=1</pre>
+
+                <h5>Parameter</h5>
+
+                <table>
+                    <tr>
+                        <th>Field</th>
+                        <th>Value</th>
+                        <th>Description</th>
+                    </tr>
+                    <tr>
+                        <td>businessid</td>
+                        <td>1</td>
+                        <td></td>
+                    </tr>
+                    
+                </table>
+
+                <h5>Response (Success)</h5>        
+
+
+                <pre class="prettyprint lang-js linenums">
+{
+    "status": "1",
+    "message": "Data Show Successfully",
+    "result": [
+        {
+            "id": "136",
+            "name_english": "",
+            "name_arabic": "صاج كو",
+            "short_description_english": "Best Saj And Shawarma in Kuwait",
+            "short_description_arabic": "أطيب صاج وشاورما بالكويت",
+            "categoryID": "1",
+            "category_name_english": "Restaurants and Cafes",
+            "category_name_arabic": "المطاعم و المقاهي",
+            "subcategory_name_english": "",
+            "subcategory_name_arabic": "",
+            "instagram": "@sajcokw",
+            "twitter": "@sajcokw",
+            "facebook": "",
+            "email": "sajco@freshpoints.com",
+            "website": "www.sajcokw.com",
+            "createdate": "1432814796",
+            "expdate": "1428830474",
+            "city_name_english": "Farwaniya",
+            "city_name_arabic": "الفروانية",
+            "area_name_english": "",
+            "area_name_arabic": "",
+            "lat": "29.337493214999256",
+            "lng": "48.069777488708496",
+            "phone": "44556677",
+            "physicaladdress_english": "ffff",
+            "physicaladdress_arabic": "hgggg",
+            "image": "c2aee56f48cbb614f1ee2ed9477958bd.png",
+            "rating": "0.00",
+            "visitor": "27",
+            "distance": "10.67645228435527"
+        }
+    ]
+}
+                </pre>
+
+                    <h5>Response (Error)</h5>
+<pre class="prettyprint lang-js linenums">
+{
+    "status": "0",
+    "message": "No Data Found",
+    "result": []
+}
+</pre>
+</section>
+
+
+
+<section id="all_branch_by_city">
+    
+            <div class="page-header"><h3>All Branch by City</h3><hr class="notop"></div>
+
+                <h4 class="method"> <span class="get"> GET</span> </h4>
+                <pre class="prettyprint lang-html">http://aapbd.com/darmadari/api/allBranchbycity?cityid=1</pre>
+
+                <h5>Parameter</h5>
+
+                <table>
+                    <tr>
+                        <th>Field</th>
+                        <th>Value</th>
+                        <th>Description</th>
+                    </tr>
+                    <tr>
+                        <td>cityid</td>
+                        <td>1</td>
+                        <td></td>
+                    </tr>
+                    
+                </table>
+
+                <h5>Response (Success)</h5>        
+
+
+                <pre class="prettyprint lang-js linenums">
+{
+    "status": "1",
+    "message": "Data Show Successfully",
+    "result": [
+        {
+            "id": "140",
+            "name_english": "Appbd Test Item",
+            "name_arabic": "Appbd اختبار البند",
+            "short_description_english": "This is for only testing purpose.",
+            "short_description_arabic": "هذا هو لاختبار فقط الغرض.",
+            "categoryID": "1",
+            "category_name_english": "Restaurants and Cafes",
+            "category_name_arabic": "المطاعم و المقاهي",
+            "subcategory_name_english": "",
+            "subcategory_name_arabic": "",
+            "instagram": "",
+            "twitter": "",
+            "facebook": "",
+            "email": "mhshohel89@gmail.com",
+            "website": "http://aapbd.com",
+            "createdate": "1432814796",
+            "expdate": "1436504400",
+            "city_name_english": "Kuwait City",
+            "city_name_arabic": "مدينة الكويت",
+            "area_name_english": "",
+            "area_name_arabic": "",
+            "lat": "29.338368629820323",
+            "lng": "47.986907958984375",
+            "phone": "0521548545",
+            "physicaladdress_english": "Mirpur DOHS\nDhaka\nBangladesh",
+            "physicaladdress_arabic": "ميربور DOHS\nدكا\nبنغلاديش",
+            "image": "d1a6ed6ea07cf7db4a9ce81566e121f6.jpg",
+            "rating": "0.00",
+            "visitor": "2"
+        },
+        {
+            "id": "137",
+            "name_english": "Hotel 1",
+            "name_arabic": "فندق 1",
+            "short_description_english": "This short description for hotel 1 test",
+            "short_description_arabic": "هذا وصف مختصر عن فندق 1 اختبار",
+            "categoryID": "6",
+            "category_name_english": "Hotels",
+            "category_name_arabic": "فنادق",
+            "subcategory_name_english": "",
+            "subcategory_name_arabic": "",
+            "instagram": "",
+            "twitter": "",
+            "facebook": "",
+            "email": "amarkotha366@gmail.com",
+            "website": "http://aapbd.com",
+            "createdate": "1432814796",
+            "expdate": "1432814796",
+            "city_name_english": "Kuwait City",
+            "city_name_arabic": "مدينة الكويت",
+            "area_name_english": "",
+            "area_name_arabic": "",
+            "lat": "29.35096790933762",
+            "lng": "47.98295974731445",
+            "phone": "0521548545",
+            "physicaladdress_english": "Kwuat",
+            "physicaladdress_arabic": "هذا وصف مختصر عن فندق 1 اختبار",
+            "image": "a7d93a11c06f2caf4b2db168d137effc.jpg",
+            "rating": "0.00",
+            "visitor": "0"
+        }
+    ]
+}                </pre>
+
+                    <h5>Response (Error)</h5>
+<pre class="prettyprint lang-js linenums">
+{
+    "status": "0",
+    "message": "No Data Found",
+    "result": []
+}
+</pre>
+</section>
+
+
+
+<section id="insert_rating">
+    
+            <div class="page-header"><h3>Insert Rating</h3><hr class="notop"></div>
+
+                <h4 class="method"> <span class="get"> GET</span> </h4>
+                <pre class="prettyprint lang-html">http://aapbd.com/darmadari/api/rating?businessid=6&rate=1&comments=test</pre>
+
+                <h5>Parameter</h5>
+
+                <table>
+                    <tr>
+                        <th>Field</th>
+                        <th>Value</th>
+                        <th>Description</th>
+                    </tr>
+                    <tr>
+                        <td>businessid</td>
+                        <td>6</td>
+                        <td>Buiness ID</td>
+                    </tr>
+                    <tr>
+                        <td>rate</td>
+                        <td>1</td>
+                        <td>Rating Point</td>
+                    </tr>
+                    <tr>
+                        <td>comments</td>
+                        <td>your given commets</td>
+                        <td>This will save with rating.</td>
+                    </tr>                    
+                </table>
+
+                <h5>Response (Success)</h5>        
+
+
+                <pre class="prettyprint lang-js linenums">
+{
+    "status": "1",
+    "message": "Insert Successfully"
+}
+</pre>
+                    <h5>Response (Error)</h5>
+<pre class="prettyprint lang-js linenums">
+{
+    "status": "0",
+    "message": "Insert Unsuccessful"
+}
+</pre>
+</section>
+
+
+
+<section id="all_branch_by_category">
+    
+            <div class="page-header"><h3>All Branch by Category</h3><hr class="notop"></div>
+
+                <h4 class="method"> <span class="get"> GET</span> </h4>
+                <pre class="prettyprint lang-html">http://aapbd.com/darmadari/api/allBranchbycategory?categoryid=1</pre>
+
+                <h5>Parameter</h5>
+
+                <table>
+                    <tr>
+                        <th>Field</th>
+                        <th>Value</th>
+                        <th>Description</th>
+                    </tr>
+                    <tr>
+                        <td>categoryid</td>
+                        <td>1</td>
+                        <td>Category ID</td>
+                    </tr>                    
+                </table>
+
+                <h5>Response (Success)</h5>        
+
+
+                <pre class="prettyprint lang-js linenums">
+{
+    "status": "1",
+    "message": "Data Show Successfully",
+    "result": [
+        {
+            "id": "140",
+            "status": "active",
+            "approved": "yes",
+            "name_english": "Appbd Test Item",
+            "name_arabic": "Appbd اختبار البند",
+            "short_description_english": "This is for only testing purpose.",
+            "short_description_arabic": "هذا هو لاختبار فقط الغرض.",
+            "rootBusiness": "0",
+            "categoryID": "1",
+            "category_name_english": "Restaurants and Cafes",
+            "category_name_arabic": "المطاعم و المقاهي",
+            "subcategory_name_english": "Restaurant",
+            "subcategory_name_arabic": "مطعم",
+            "instagram": "",
+            "twitter": "",
+            "facebook": "",
+            "email": "mhshohel89@gmail.com",
+            "website": "http://aapbd.com",
+            "createdate": "1432814796",
+            "expdate": "1436504400",
+            "city_name_english": "Kuwait City",
+            "city_name_arabic": "مدينة الكويت",
+            "featured": "0",
+            "area_name_english": "Abdulla Al Salem",
+            "area_name_arabic": "عبدالله السالم",
+            "lat": "29.338368629820323",
+            "lng": "47.986907958984375",
+            "phone": "0521548545",
+            "physicaladdress_english": "Mirpur DOHS\nDhaka\nBangladesh",
+            "physicaladdress_arabic": "ميربور DOHS\nدكا\nبنغلاديش",
+            "image": "d1a6ed6ea07cf7db4a9ce81566e121f6.jpg",
+            "rating": "0.00",
+            "visitor": "2"
+        },
+        {
+            "id": "139",
+            "status": "active",
+            "approved": "yes",
+            "name_english": "Starbucks",
+            "name_arabic": "ستاربكس",
+            "short_description_english": "Very nice coffee place",
+            "short_description_arabic": "مقهى رائع جدا",
+            "rootBusiness": "0",
+            "categoryID": "1",
+            "category_name_english": "Restaurants and Cafes",
+            "category_name_arabic": "المطاعم و المقاهي",
+            "subcategory_name_english": "",
+            "subcategory_name_arabic": "",
+            "instagram": "@starbucks",
+            "twitter": "@starbucks",
+            "facebook": "starbucks",
+            "email": "nwash79@gmail.com",
+            "website": "www.ddd.cpm",
+            "createdate": "1433772317",
+            "expdate": "1433772317",
+            "city_name_english": "Jahra",
+            "city_name_arabic": "الجهراء",
+            "featured": "0",
+            "area_name_english": "Qibla",
+            "area_name_arabic": "القبلة",
+            "lat": "29.352492211915028",
+            "lng": "47.98920661211014",
+            "phone": "55522236",
+            "physicaladdress_english": "ffffffff",
+            "physicaladdress_arabic": "بلابلبلبلب",
+            "image": "f250af5f3401a1f016b197297c2738b2.JPG",
+            "rating": "0.00",
+            "visitor": "8"
+        },
+        {
+            "id": "133",
+            "status": "active",
+            "approved": "yes",
+            "name_english": "Burger Co",
+            "name_arabic": "برجر كو",
+            "short_description_english": "The REAL Burgers",
+            "short_description_arabic": "البرجر الاصلي",
+            "rootBusiness": "0",
+            "categoryID": "1",
+            "category_name_english": "Restaurants and Cafes",
+            "category_name_arabic": "المطاعم و المقاهي",
+            "subcategory_name_english": "Restaurant",
+            "subcategory_name_arabic": "مطعم",
+            "instagram": "@burgercokw",
+            "twitter": "@burgercokw",
+            "facebook": "",
+            "email": "burgerco@freshpoints.com",
+            "website": "http://burgerco.com/",
+            "createdate": "1428828529",
+            "expdate": "1428828529",
+            "city_name_english": "Farwaniya",
+            "city_name_arabic": "الفروانية",
+            "featured": "0",
+            "area_name_english": "Jabriya",
+            "area_name_arabic": "الجابريه",
+            "lat": "29.32574036826305",
+            "lng": "48.027141094207764",
+            "phone": "222 51 555",
+            "physicaladdress_english": "Jabriya\nBlock 3A\nBehind Royal Hayat Hospital",
+            "physicaladdress_arabic": "الجابرية \nقطعة 3 أ\nخلف مستشفى رويال حياة",
+            "image": "63be038749d1b46147992909feb9f982.JPG",
+            "rating": "2.81",
+            "visitor": "344"
+        }
+    ]
+}
+</pre>
+                    <h5>Response (Error)</h5>
+<pre class="prettyprint lang-js linenums">
+{
+    "status": "0",
+    "message": "No Data Found",
+    "result": []
+}
+</pre>
+</section>
+
+
+
+
+
+
 
 <section id="search_api">
     
