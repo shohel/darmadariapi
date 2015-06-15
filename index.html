@@ -1,0 +1,273 @@
+<!doctype html>  
+<!--[if IE 6 ]><html lang="en-us" class="ie6"> <![endif]-->
+<!--[if IE 7 ]><html lang="en-us" class="ie7"> <![endif]-->
+<!--[if IE 8 ]><html lang="en-us" class="ie8"> <![endif]-->
+<!--[if (gt IE 7)|!(IE)]><!-->
+<html lang="en-us"><!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	
+	<title>Darmadari Api</title>
+	
+	<meta name="description" content="">
+	<meta name="author" content="AAPBD">
+	<meta name="copyright" content="AAPBD">
+	<meta name="generator" content="Darmadari Api provide by aapbd">
+	<meta name="date" content="2015-06-07T00:00:00+02:00">
+	
+	<link rel="stylesheet" href="assets/css/documenter_style.css" media="all">
+	<link rel="stylesheet" href="assets/js/google-code-prettify/prettify.css" media="screen">
+	<script src="assets/js/google-code-prettify/prettify.js"></script>
+
+	<script src="assets/js/jquery.js"></script>
+	
+	<script src="assets/js/jquery.scrollTo.js"></script>
+	<script src="assets/js/jquery.easing.js"></script>
+	
+	<script>document.createElement('section');var duration='500',easing='swing';</script>
+	<script src="assets/js/script.js"></script>
+	
+</head>
+<body class="documenter-project-itemname">
+	<div id="documenter_sidebar">
+		<a href="#documenter_cover" id="logo_text">Darmadari</a>
+		<ul id="documenter_nav">
+            <li class="nav-header"> <a href="#general">General</a> </li>
+            <li><a class="current" href="#menu_item">Menu Item</a></li>
+			<li><a href="#city_list" title="City List">City List</a></li>
+		</ul>
+		<div id="documenter_copyright">Copyright <a href="http://aapbd.com">AAPBD </a></div>
+	</div>
+	<div id="documenter_content">
+        <section id="general"></section>
+
+        <section id="menu_item">
+	<h1>Menu Item</h1>
+
+	<hr>
+
+        <h4 class="method"> <span class="get"> GET</span> </h4>
+        <pre class="prettyprint lang-html">http://aapbd.com/darmadari/api/menuitem</pre>
+
+        <h5>No parameter need</h5>
+        <h5>Success Field</h5>
+
+        <table>
+            <tr>
+                <th>Field</th>
+                <th>Type</th>
+                <th>Description</th>
+            </tr>
+            <tr>
+                <td>status</td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>message</td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>result</td>
+                <td></td>
+                <td></td>
+            </tr>
+        </table>
+
+        <h5>Example Response (Success)</h5>
+
+
+<pre class="prettyprint lang-js linenums">
+{
+"status": "1",
+"message": "Data Show Successfully",
+"result": [
+    {
+        "id": "1",
+        "name_english": "Restaurants and cafe",
+        "name_arabic": "ط§ظ„ظ…ط·ط§ط¹ظ… ظˆ ط§ظ„ظ…ظ‚ط§ظ‡ظٹ",
+        "icon": ""
+    },
+    {
+        "id": "2",
+        "name_english": "Shopping",
+        "name_arabic": "ط§ظ„طھط³ظˆظ‚",
+        "icon": ""
+    },
+    {
+        "id": "3",
+        "name_english": "Hospitals & Clinics",
+        "name_arabic": "ط§ظ„ظ…ط³طھط´ظپظٹط§طھ ظˆ ط¹ظٹط§ط¯ط§طھ",
+        "icon": ""
+    },
+    {
+        "id": "4",
+        "name_english": "Telecom",
+        "name_arabic": "ط§ظ„ط§طھطµط§ظ„ط§طھ",
+        "icon": ""
+    },
+    {
+        "id": "5",
+        "name_english": "Bank",
+        "name_arabic": "ظ…طµط±ظپ",
+        "icon": ""
+    },
+    {
+        "id": "6",
+        "name_english": "Hotels",
+        "name_arabic": "ظپظ†ط¯ظ‚ طھظ„ظٹظƒظˆظ…",
+        "icon": ""
+    },
+    {
+        "id": "7",
+        "name_english": "Sponsor",
+        "name_arabic": "ظƒظپظٹظ„",
+        "icon": ""
+    },
+    {
+        "id": "8",
+        "name_english": "Map View",
+        "name_arabic": "ط¹ط±ط¶ ط¹ظ„ظ‰ ط§ظ„ط®ط±ظٹط·ط©",
+        "icon": ""
+    },
+    {
+        "id": "10",
+        "name_english": "Health & Wellness",
+        "name_arabic": "ط§ظ„طµط­ط© ظˆط§ظ„ط¹ط§ظپظٹط©",
+        "icon": ""
+    },
+    {
+        "id": "11",
+        "name_english": "Beauty",
+        "name_arabic": "ط§ظ„ط¬ظ…ط§ظ„",
+        "icon": ""
+    },
+    {
+        "id": "12",
+        "name_english": "Car dealers",
+        "name_arabic": "طھط¬ط§ط± ط§ظ„ط³ظٹط§ط±ط§طھ",
+        "icon": ""
+    },
+    {
+        "id": "13",
+        "name_english": "Gas Stations",
+        "name_arabic": "ظ…ط­ط·ط§طھ ط§ظ„ط؛ط§ط²",
+        "icon": ""
+    },
+    {
+        "id": "14",
+        "name_english": "Embassies",
+        "name_arabic": "ط§ظ„ط³ظپط§ط±ط§طھ",
+        "icon": ""
+    },
+    {
+        "id": "15",
+        "name_english": "Government Agencies",
+        "name_arabic": "ظˆظƒط§ظ„ط§طھ ط§ظ„ط­ظƒظˆظ…ط©",
+        "icon": ""
+    }
+],
+"baseurl": "http://aapbd.com/darmadari/uploads/"
+}
+</pre>
+
+        <h5>Example Response (Error)</h5>
+<pre class="prettyprint lang-js linenums">
+{
+    "status":"0",
+    "message":"No Data Found",
+    "result":[]
+}
+</pre>
+
+    </section>
+
+        <section id="city_list">
+            <div class="page-header"><h3>City List</h3><hr class="notop"></div>
+
+                <h4 class="method"> <span class="get"> GET</span> </h4>
+                <pre class="prettyprint lang-html">http://aapbd.com/darmadari/api/menuitem</pre>
+
+                <h5>No parameter needed</h5>
+                <h5>Success Field</h5>
+
+                <table>
+                    <tr>
+                        <th>Field</th>
+                        <th>Type</th>
+                        <th>Description</th>
+                    </tr>
+                    <tr>
+                        <td>status</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>message</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>result</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </table>
+
+                <h5>Example Response (Success)</h5>
+
+
+                <pre class="prettyprint lang-js linenums">
+{
+"status": "1",
+"message": "Data Show Successfully",
+"result": [
+    {
+        "id": "6",
+        "name_english": "My Location",
+        "name_arabic": "مكاني"
+    },
+    {
+        "id": "5",
+        "name_english": "Kuwait City",
+        "name_arabic": "مدينة الكويت"
+    },
+    {
+        "id": "4",
+        "name_english": "Ahmadi",
+        "name_arabic": "أحمدي"
+    },
+    {
+        "id": "3",
+        "name_english": "Hawalli",
+        "name_arabic": "حولي"
+    },
+    {
+        "id": "2",
+        "name_english": "Farwaniya",
+        "name_arabic": "الفروانية"
+    },
+    {
+        "id": "1",
+        "name_english": "Jahra",
+        "name_arabic": "\nالجهراء"
+    }
+]
+}
+                </pre>
+
+                    <h5>Example Response (Error)</h5>
+<pre class="prettyprint lang-js linenums">
+{
+    "status":"0",
+    "message":"No Data Found",
+    "result":[]
+}
+</pre>
+        </section>
+
+
+	</div>
+</body>
+</html>
