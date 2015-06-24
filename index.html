@@ -91,89 +91,258 @@
 
 <pre class="prettyprint lang-js linenums">
 {
-"status": "1",
-"message": "Data Show Successfully",
-"result": [
-    {
-        "id": "1",
-        "name_english": "Restaurants and cafe",
-        "name_arabic": "ط§ظ„ظ…ط·ط§ط¹ظ… ظˆ ط§ظ„ظ…ظ‚ط§ظ‡ظٹ",
-        "icon": ""
-    },
-    {
-        "id": "2",
-        "name_english": "Shopping",
-        "name_arabic": "ط§ظ„طھط³ظˆظ‚",
-        "icon": ""
-    },
-    {
-        "id": "3",
-        "name_english": "Hospitals & Clinics",
-        "name_arabic": "ط§ظ„ظ…ط³طھط´ظپظٹط§طھ ظˆ ط¹ظٹط§ط¯ط§طھ",
-        "icon": ""
-    },
-    {
-        "id": "4",
-        "name_english": "Telecom",
-        "name_arabic": "ط§ظ„ط§طھطµط§ظ„ط§طھ",
-        "icon": ""
-    },
-    {
-        "id": "5",
-        "name_english": "Bank",
-        "name_arabic": "ظ…طµط±ظپ",
-        "icon": ""
-    },
-    {
-        "id": "6",
-        "name_english": "Hotels",
-        "name_arabic": "ظپظ†ط¯ظ‚ طھظ„ظٹظƒظˆظ…",
-        "icon": ""
-    },
-    {
-        "id": "7",
-        "name_english": "Sponsor",
-        "name_arabic": "ظƒظپظٹظ„",
-        "icon": ""
-    },
-    {
-        "id": "10",
-        "name_english": "Health & Wellness",
-        "name_arabic": "ط§ظ„طµط­ط© ظˆط§ظ„ط¹ط§ظپظٹط©",
-        "icon": ""
-    },
-    {
-        "id": "11",
-        "name_english": "Beauty",
-        "name_arabic": "ط§ظ„ط¬ظ…ط§ظ„",
-        "icon": ""
-    },
-    {
-        "id": "12",
-        "name_english": "Car dealers",
-        "name_arabic": "طھط¬ط§ط± ط§ظ„ط³ظٹط§ط±ط§طھ",
-        "icon": ""
-    },
-    {
-        "id": "13",
-        "name_english": "Gas Stations",
-        "name_arabic": "ظ…ط­ط·ط§طھ ط§ظ„ط؛ط§ط²",
-        "icon": ""
-    },
-    {
-        "id": "14",
-        "name_english": "Embassies",
-        "name_arabic": "ط§ظ„ط³ظپط§ط±ط§طھ",
-        "icon": ""
-    },
-    {
-        "id": "15",
-        "name_english": "Government Agencies",
-        "name_arabic": "ظˆظƒط§ظ„ط§طھ ط§ظ„ط­ظƒظˆظ…ط©",
-        "icon": ""
-    }
-],
-"baseurl": "http://aapbd.com/darmadari/uploads/"
+    "status": "1",
+    "message": "Data Show Successfully",
+    "result": [
+        {
+            "id": "7",
+            "name_english": "Sponsor",
+            "name_arabic": "كفيل",
+            "icon": "icon_sponsor.png",
+            "map_icon": "icon_sponsor.png",
+            "subcategory": []
+        },
+        {
+            "id": "8",
+            "name_english": "Cities",
+            "name_arabic": "مدن",
+            "icon": "icon_location_map.png",
+            "map_icon": "icon_location_map.png",
+            "subcategory": []
+        },
+        {
+            "id": "1",
+            "name_english": "Restaurants and Cafes",
+            "name_arabic": "المطاعم و المقاهي",
+            "icon": "icon_eat.png",
+            "map_icon": "icon_eat.png",
+            "subcategory": [
+                {
+                    "id": "19",
+                    "icon": "",
+                    "name_english": "Restaurant",
+                    "price": "100",
+                    "name_arabic": "مطعم",
+                    "root": "1",
+                    "map_icon": "",
+                    "uploded_by": "0",
+                    "approved": "yes"
+                },
+                {
+                    "id": "20",
+                    "icon": "",
+                    "name_english": "Cafe",
+                    "price": "80",
+                    "name_arabic": "مقهى",
+                    "root": "1",
+                    "map_icon": "",
+                    "uploded_by": "0",
+                    "approved": "yes"
+                }
+            ]
+        },
+        {
+            "id": "2",
+            "name_english": "Shopping",
+            "name_arabic": "التسوق",
+            "icon": "icon_shops.png",
+            "map_icon": "icon_shops.png",
+            "subcategory": [
+                {
+                    "id": "16",
+                    "icon": "",
+                    "name_english": "Co'ops",
+                    "price": "0",
+                    "name_arabic": "الجمعيات التعاونية",
+                    "root": "2",
+                    "map_icon": "",
+                    "uploded_by": "0",
+                    "approved": "yes"
+                },
+                {
+                    "id": "17",
+                    "icon": "",
+                    "name_english": "Shopping Malls",
+                    "price": "0",
+                    "name_arabic": "المجمعات التجارية",
+                    "root": "2",
+                    "map_icon": "",
+                    "uploded_by": "0",
+                    "approved": "yes"
+                },
+                {
+                    "id": "18",
+                    "icon": "",
+                    "name_english": "Fashion",
+                    "price": "100",
+                    "name_arabic": "الملابس",
+                    "root": "2",
+                    "map_icon": "",
+                    "uploded_by": "0",
+                    "approved": "yes"
+                }
+            ]
+        },
+        {
+            "id": "3",
+            "name_english": "Hospitals & Clinics",
+            "name_arabic": "مستشفيات و عيادات",
+            "icon": "icon_hospital.png",
+            "map_icon": "icon_hospital.png",
+            "subcategory": [
+                {
+                    "id": "29",
+                    "icon": "",
+                    "name_english": "Private Medical Centers",
+                    "price": "0",
+                    "name_arabic": "مراكز طبية خاصة",
+                    "root": "3",
+                    "map_icon": "",
+                    "uploded_by": "0",
+                    "approved": ""
+                },
+                {
+                    "id": "25",
+                    "icon": "",
+                    "name_english": "Public Medical Centers",
+                    "price": "0",
+                    "name_arabic": "المستوصفات الحكومية",
+                    "root": "3",
+                    "map_icon": "",
+                    "uploded_by": "0",
+                    "approved": ""
+                },
+                {
+                    "id": "26",
+                    "icon": "",
+                    "name_english": "Public Hospitals",
+                    "price": "0",
+                    "name_arabic": "المستشفيات الحكومية",
+                    "root": "3",
+                    "map_icon": "",
+                    "uploded_by": "0",
+                    "approved": ""
+                },
+                {
+                    "id": "27",
+                    "icon": "",
+                    "name_english": "Private Clinics",
+                    "price": "300",
+                    "name_arabic": "العيادات الخاصة",
+                    "root": "3",
+                    "map_icon": "",
+                    "uploded_by": "0",
+                    "approved": ""
+                },
+                {
+                    "id": "28",
+                    "icon": "",
+                    "name_english": "Private Hospitals",
+                    "price": "500",
+                    "name_arabic": "المستشفيات الخاصة",
+                    "root": "3",
+                    "map_icon": "",
+                    "uploded_by": "0",
+                    "approved": ""
+                }
+            ]
+        },
+        {
+            "id": "4",
+            "name_english": "Telecom",
+            "name_arabic": "الاتصالات",
+            "icon": "icon_tele_communication.png",
+            "map_icon": "icon_tele_communication.png",
+            "subcategory": []
+        },
+        {
+            "id": "5",
+            "name_english": "Banks",
+            "name_arabic": "بنوك",
+            "icon": "icon_bank.png",
+            "map_icon": "icon_bank.png",
+            "subcategory": [
+                {
+                    "id": "23",
+                    "icon": "",
+                    "name_english": "ATM",
+                    "price": "100",
+                    "name_arabic": "جهاز السحب الالي",
+                    "root": "5",
+                    "map_icon": "",
+                    "uploded_by": "0",
+                    "approved": ""
+                }
+            ]
+        },
+        {
+            "id": "6",
+            "name_english": "Hotels",
+            "name_arabic": "فنادق",
+            "icon": "icon_hotel.png",
+            "map_icon": "icon_hotel.png",
+            "subcategory": []
+        },
+        {
+            "id": "10",
+            "name_english": "Health & Wellness",
+            "name_arabic": "الصحة والعافية",
+            "icon": "icon_health.png",
+            "map_icon": "icon_health.png",
+            "subcategory": []
+        },
+        {
+            "id": "11",
+            "name_english": "Beauty",
+            "name_arabic": "الجمال",
+            "icon": "icon_beauty.png",
+            "map_icon": "icon_beauty.png",
+            "subcategory": []
+        },
+        {
+            "id": "12",
+            "name_english": "Car dealers",
+            "name_arabic": "تجار السيارات",
+            "icon": "icon_cars.png",
+            "map_icon": "icon_cars.png",
+            "subcategory": []
+        },
+        {
+            "id": "13",
+            "name_english": "Gas Stations",
+            "name_arabic": "محطات الوقود",
+            "icon": "icon_oil_pamp.png",
+            "map_icon": "icon_oil_pamp.png",
+            "subcategory": []
+        },
+        {
+            "id": "14",
+            "name_english": "Embassies",
+            "name_arabic": "السفارات",
+            "icon": "icon_embassy.png",
+            "map_icon": "icon_embassy.png",
+            "subcategory": []
+        },
+        {
+            "id": "15",
+            "name_english": "Government Agencies",
+            "name_arabic": "هيئات حكومية",
+            "icon": "icon_govt_office.png",
+            "map_icon": "icon_govt_office.png",
+            "subcategory": []
+        },
+        {
+            "id": "21",
+            "name_english": "Mosques",
+            "name_arabic": "مساجد",
+            "icon": "mosque.png",
+            "map_icon": "mosque.png",
+            "subcategory": []
+        }
+    ],
+    "baseurl_icon": "http://aapbd.com/darmadari/uploads/icon/",
+    "baseurl_map_icon": "http://aapbd.com/darmadari/uploads/map_icon/",
+    "baseurl_map_icon2x": "http://aapbd.com/darmadari/uploads/map_icon2x/"
 }
 </pre>
 
