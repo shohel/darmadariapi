@@ -46,6 +46,7 @@
             <li><a href="#all_branch_by_category" title="All Branch by Category">All Branch by Category</a></li>
 
             <li><a href="#search_api" title="Search">Search</a></li>
+            <li><a href="#all_branch_by_city_area" title="All Branch by City and Area">All Branch by City and Area</a></li>
 		</ul>
 		<div id="documenter_copyright">Copyright <a href="http://aapbd.com">AAPBD </a></div>
 	</div>
@@ -1313,6 +1314,87 @@
 }
 </pre>
 </section>
+
+
+
+        <section id="all_branch_by_city_area">
+
+            <div class="page-header"><h3>Branch Search By City and Area</h3><hr class="notop"></div>
+
+            <h4 class="method"> <span class="get"> GET</span> </h4>
+            <pre class="prettyprint lang-html">http://aapbd.com/darmadari/api/allBranchbyCityArea?cityid=1&areaid=8</pre>
+
+            <h5>Parameter</h5>
+
+            <table>
+                <tr>
+                    <th>Field</th>
+                    <th>Value</th>
+                    <th>Description</th>
+                </tr>
+                <tr>
+                    <td>cityid</td>
+                    <td>1</td>
+                    <td><b>(Int)</b> It will be City ID</td>
+                </tr>
+                <tr>
+                    <td>areaid</td>
+                    <td>8</td>
+                    <td><b>(Int)</b> It will be Area ID</td>
+                </tr>
+
+            </table>
+
+            <h5>Response (Success)</h5>
+
+                <pre class="prettyprint lang-js linenums">
+{
+    "status": "1",
+    "message": "Data Show Successfully",
+    "result": [
+        {
+            "id": "137",
+            "name_english": "Hotel 1",
+            "name_arabic": "فندق 1",
+            "short_description_english": "This short description for hotel 1 test",
+            "short_description_arabic": "هذا وصف مختصر عن فندق 1 اختبار",
+            "categoryID": "6",
+            "category_name_english": "Hotels",
+            "category_name_arabic": "فنادق",
+            "subcategory_name_english": "",
+            "subcategory_name_arabic": "",
+            "instagram": "",
+            "twitter": "",
+            "facebook": "",
+            "email": "amarkotha366@gmail.com",
+            "website": "http://aapbd.com",
+            "createdate": "1432814796",
+            "expdate": "1432814796",
+            "city_name_english": "Kuwait City",
+            "city_name_arabic": "مدينة الكويت",
+            "area_name_english": "",
+            "area_name_arabic": "",
+            "lat": "29.35096790933762",
+            "lng": "47.98295974731445",
+            "phone": "0521548545",
+            "physicaladdress_english": "Kwuat",
+            "physicaladdress_arabic": "هذا وصف مختصر عن فندق 1 اختبار",
+            "image": "a7d93a11c06f2caf4b2db168d137effc.jpg",
+            "rating": "0.00",
+            "visitor": "0"
+        }
+    ]
+}                </pre>
+
+            <h5>Response (Error)</h5>
+<pre class="prettyprint lang-js linenums">
+{
+    "status": "0",
+    "message": "No Data Found",
+    "result": []
+}
+</pre>
+        </section>
 
 
 
