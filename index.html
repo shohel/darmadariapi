@@ -41,6 +41,7 @@
             <li><a href="#nearest_branch" title="Nearest Branch">Nearest Branch</a></li>
             <li><a href="#nearest_by_main_branch" title="Nearest by Main Branch">Nearest by Main Branch</a></li>
             <li><a href="#all_branch_by_business" title="All Branch by Business">All Branch by Business</a></li>
+            <li><a href="#branch_list_by_main_business" title="All Branch by Business">Branch list by Main Business</a></li>
             <li><a href="#all_branch_by_city" title="All Branch by City">All Branch by City</a></li>
             <li><a href="#insert_rating" title="Insert Rating">Insert Rating</a></li>
             <li><a href="#all_branch_by_category" title="All Branch by Category">All Branch by Category</a></li>
@@ -933,6 +934,96 @@
 }
 </pre>
 </section>
+
+
+
+
+        <section id="branch_list_by_main_business">
+
+            <div class="page-header"><h3>Branch list by Main Business</h3><hr class="notop"></div>
+
+            <h4 class="method"> <span class="get"> GET</span> </h4>
+            <pre class="prettyprint lang-html"> http://aapbd.com/darmadari/api/branchList?rootBusinessID=135</pre>
+
+            <h5>Parameter</h5>
+
+            <table>
+                <tr>
+                    <th>Field</th>
+                    <th>Value</th>
+                    <th>Description</th>
+                </tr>
+                <tr>
+                    <td>businessid</td>
+                    <td>1</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>lat</td>
+                    <td>29.3446927</td>
+                    <td rowspan="2"><strong>(Optional)</strong> if need, add with url. If add lat and long, you will find distance field in json return, Distance return as kilometers. </td>
+                </tr>
+                <tr>
+                    <td>long</td>
+                    <td>47.9748266</td>
+                </tr>
+
+            </table>
+
+            <h5>Response (Success)</h5>
+
+
+                <pre class="prettyprint lang-js linenums">
+{
+    "status": "1",
+    "message": "Data Show Successfully",
+    "result": [
+        {
+            "id": "136",
+            "name_english": "",
+            "name_arabic": "صاج كو",
+            "short_description_english": "Best Saj And Shawarma in Kuwait",
+            "short_description_arabic": "أطيب صاج وشاورما بالكويت",
+            "categoryID": "1",
+            "category_name_english": "Restaurants and Cafes",
+            "category_name_arabic": "المطاعم و المقاهي",
+            "subcategory_name_english": "",
+            "subcategory_name_arabic": "",
+            "instagram": "@sajcokw",
+            "twitter": "@sajcokw",
+            "facebook": "",
+            "email": "sajco@freshpoints.com",
+            "website": "www.sajcokw.com",
+            "createdate": "1432814796",
+            "expdate": "1428830474",
+            "city_name_english": "Farwaniya",
+            "city_name_arabic": "الفروانية",
+            "area_name_english": "",
+            "area_name_arabic": "",
+            "lat": "29.337493214999256",
+            "lng": "48.069777488708496",
+            "phone": "44556677",
+            "physicaladdress_english": "ffff",
+            "physicaladdress_arabic": "hgggg",
+            "image": "c2aee56f48cbb614f1ee2ed9477958bd.png",
+            "rating": "0.00",
+            "visitor": "27",
+            "distance": "10.67645228435527"
+        }
+    ]
+}
+                </pre>
+
+            <h5>Response (Error)</h5>
+<pre class="prettyprint lang-js linenums">
+{
+    "status": "0",
+    "message": "No Data Found",
+    "result": []
+}
+</pre>
+        </section>
+
 
 
 
