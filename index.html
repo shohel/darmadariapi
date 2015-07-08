@@ -48,6 +48,8 @@
 
             <li><a href="#search_api" title="Search">Search</a></li>
             <li><a href="#all_branch_by_city_area" title="All Branch by City and Area">All Branch by City and Area</a></li>
+            <li><a href="#all_branch_by_top_rated" title="All Branch by City and Area">All Branch by Top Rated</a></li>
+
 		</ul>
 		<div id="documenter_copyright">Copyright <a href="http://aapbd.com">AAPBD </a></div>
 	</div>
@@ -1544,6 +1546,228 @@
 }
 </pre>
         </section>
+
+
+
+
+
+        <section id="all_branch_by_top_rated">
+
+            <div class="page-header"><h3>Branch Search By City and Area</h3><hr class="notop"></div>
+
+            <h4 class="method"> <span class="get"> GET</span> </h4>
+            <pre class="prettyprint lang-html">http://aapbd.com/darmadari/api/toprated</pre>
+
+            <h5>No need Parameter</h5>
+
+            <h5>Response (Success)</h5>
+
+                <pre class="prettyprint lang-js linenums">
+{
+    "status": "1",
+    "message": "Data Show Successfully",
+    "result": [
+        {
+            "id": "137",
+            "name_english": "Hotel 1",
+            "name_arabic": "فندق 1",
+            "short_description_english": "This short description for hotel 1 test",
+            "short_description_arabic": "هذا وصف مختصر عن فندق 1 اختبار",
+            "categoryID": "6",
+            "category_name_english": "Hotels",
+            "category_name_arabic": "فنادق",
+            "subcategory_name_english": "",
+            "subcategory_name_arabic": "",
+            "instagram": "",
+            "twitter": "",
+            "facebook": "",
+            "email": "amarkotha366@gmail.com",
+            "website": "http://aapbd.com",
+            "createdate": "1432814796",
+            "expdate": "1432814796",
+            "city_name_english": "Kuwait City",
+            "city_name_arabic": "مدينة الكويت",
+            "area_name_english": "",
+            "area_name_arabic": "",
+            "lat": "29.35096790933762",
+            "lng": "47.98295974731445",
+            "phone": "0521548545",
+            "physicaladdress_english": "Kwuat",
+            "physicaladdress_arabic": "هذا وصف مختصر عن فندق 1 اختبار",
+            "image": "a7d93a11c06f2caf4b2db168d137effc.jpg",
+            "rating": "4.50",
+            "visitor": "0"
+        },
+        {
+            "id": "140",
+            "name_english": "Appbd Test Item",
+            "name_arabic": "Appbd اختبار البند",
+            "short_description_english": "This is for only testing purpose.",
+            "short_description_arabic": "هذا هو لاختبار فقط الغرض.",
+            "categoryID": "1",
+            "category_name_english": "Restaurants and Cafes",
+            "category_name_arabic": "المطاعم و المقاهي",
+            "subcategory_name_english": "",
+            "subcategory_name_arabic": "",
+            "instagram": "",
+            "twitter": "",
+            "facebook": "",
+            "email": "mhshohel89@gmail.com",
+            "website": "http://aapbd.com",
+            "createdate": "1432814796",
+            "expdate": "1436504400",
+            "city_name_english": "Kuwait City",
+            "city_name_arabic": "مدينة الكويت",
+            "area_name_english": "",
+            "area_name_arabic": "",
+            "lat": "29.338368629820323",
+            "lng": "47.986907958984375",
+            "phone": "0521548545",
+            "physicaladdress_english": "Mirpur DOHS\nDhaka\nBangladesh",
+            "physicaladdress_arabic": "ميربور DOHS\nدكا\nبنغلاديش",
+            "image": "d1a6ed6ea07cf7db4a9ce81566e121f6.jpg",
+            "rating": "3.60",
+            "visitor": "108"
+        },
+        {
+            "id": "133",
+            "name_english": "Burger Co",
+            "name_arabic": "برجر كو",
+            "short_description_english": "The REAL Burgers",
+            "short_description_arabic": "البرجر الاصلي",
+            "categoryID": "1",
+            "category_name_english": "Restaurants and Cafes",
+            "category_name_arabic": "المطاعم و المقاهي",
+            "subcategory_name_english": "",
+            "subcategory_name_arabic": "",
+            "instagram": "@burgercokw",
+            "twitter": "@burgercokw",
+            "facebook": "",
+            "email": "burgerco@freshpoints.com",
+            "website": "http://burgerco.com/",
+            "createdate": "1428828529",
+            "expdate": "1428828529",
+            "city_name_english": "Farwaniya",
+            "city_name_arabic": "الفروانية",
+            "area_name_english": "",
+            "area_name_arabic": "",
+            "lat": "29.32574036826305",
+            "lng": "48.027141094207764",
+            "phone": "222 51 555",
+            "physicaladdress_english": "Jabriya\nBlock 3A\nBehind Royal Hayat Hospital",
+            "physicaladdress_arabic": "الجابرية \nقطعة 3 أ\nخلف مستشفى رويال حياة",
+            "image": "63be038749d1b46147992909feb9f982.JPG",
+            "rating": "3.01",
+            "visitor": "554"
+        },
+        {
+            "id": "135",
+            "name_english": "Saj Co",
+            "name_arabic": "صاج كو",
+            "short_description_english": "Best Saj And Shawarma in Kuwait",
+            "short_description_arabic": "أطيب صاج وشاورما بالكويت",
+            "categoryID": "1",
+            "category_name_english": "Restaurants and Cafes",
+            "category_name_arabic": "المطاعم و المقاهي",
+            "subcategory_name_english": "",
+            "subcategory_name_arabic": "",
+            "instagram": "@sajcokw",
+            "twitter": "@sajcokw",
+            "facebook": "",
+            "email": "sajco@freshpoints.com",
+            "website": "www.sajcokw.com",
+            "createdate": "1428830474",
+            "expdate": "1428830474",
+            "city_name_english": "Jahra",
+            "city_name_arabic": "الجهراء",
+            "area_name_english": "",
+            "area_name_arabic": "",
+            "lat": "29.375997974961866",
+            "lng": "47.97522157430649",
+            "phone": "222 51 555",
+            "physicaladdress_english": "Mubarakiya\nSaqran Complex\nBehind Gulf Bank Head Office",
+            "physicaladdress_arabic": "المباركية\nمجمع الصقران\nخلف بنك الخليج الرئيسي",
+            "image": "f683277b799c38270ae22f67395c1aca.png",
+            "rating": "2.96",
+            "visitor": "397"
+        },
+        {
+            "id": "139",
+            "name_english": "Starbucks",
+            "name_arabic": "ستاربكس",
+            "short_description_english": "Very nice coffee place",
+            "short_description_arabic": "مقهى رائع جدا",
+            "categoryID": "1",
+            "category_name_english": "Restaurants and Cafes",
+            "category_name_arabic": "المطاعم و المقاهي",
+            "subcategory_name_english": "",
+            "subcategory_name_arabic": "",
+            "instagram": "@starbucks",
+            "twitter": "@starbucks",
+            "facebook": "starbucks",
+            "email": "nwash79@gmail.com",
+            "website": "www.ddd.cpm",
+            "createdate": "1433772317",
+            "expdate": "1433772317",
+            "city_name_english": "Jahra",
+            "city_name_arabic": "الجهراء",
+            "area_name_english": "",
+            "area_name_arabic": "",
+            "lat": "29.352492211915028",
+            "lng": "47.98920661211014",
+            "phone": "55522236",
+            "physicaladdress_english": "ffffffff",
+            "physicaladdress_arabic": "بلابلبلبلب",
+            "image": "f250af5f3401a1f016b197297c2738b2.JPG",
+            "rating": "2.90",
+            "visitor": "189"
+        },
+        {
+            "id": "136",
+            "name_english": "",
+            "name_arabic": "صاج كو",
+            "short_description_english": "Best Saj And Shawarma in Kuwait",
+            "short_description_arabic": "أطيب صاج وشاورما بالكويت",
+            "categoryID": "1",
+            "category_name_english": "Restaurants and Cafes",
+            "category_name_arabic": "المطاعم و المقاهي",
+            "subcategory_name_english": "",
+            "subcategory_name_arabic": "",
+            "instagram": "@sajcokw",
+            "twitter": "@sajcokw",
+            "facebook": "",
+            "email": "sajco@freshpoints.com",
+            "website": "www.sajcokw.com",
+            "createdate": "1432814796",
+            "expdate": "1428830474",
+            "city_name_english": "Farwaniya",
+            "city_name_arabic": "الفروانية",
+            "area_name_english": "",
+            "area_name_arabic": "",
+            "lat": "29.337493214999256",
+            "lng": "48.069777488708496",
+            "phone": "44556677",
+            "physicaladdress_english": "ffff",
+            "physicaladdress_arabic": "hgggg",
+            "image": "c2aee56f48cbb614f1ee2ed9477958bd.png",
+            "rating": "2.76",
+            "visitor": "87"
+        }
+    ]
+}
+</pre>
+
+            <h5>Response (Error)</h5>
+	<pre class="prettyprint lang-js linenums">
+	{
+	    "status": "0",
+	    "message": "No Data Found",
+	    "result": []
+	}
+	</pre>
+</section>
+
+
 
 
 
